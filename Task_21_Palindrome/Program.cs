@@ -1,18 +1,9 @@
 ﻿Console.WriteLine ("Введите 5-значное число");
 int Number = Convert.ToInt16(Console.ReadLine());
-int [] array = new int[5];
-int index = 4;
-while (index >= 0)
+if (Number/10000 == Number%10)
 {
-    array[index] = Number%10;
-    Number = Number/10;
-    index = index - 1;
-}
-if (array[0] == array[4])
-{
-    if (array[1] == array[3])
-    Console.WriteLine ($"Введённое вами число палиндром");
+    if ((Number/1000)%10 == (Number/10)%10)
+    Console.WriteLine ($"Число {Number} палиндром");
 }
 else
-    Console.WriteLine ($"Введённое вами число не палиндром");
-
+    Console.WriteLine ($"Число {Number} не палиндром");
